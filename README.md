@@ -2,6 +2,13 @@
 
 A modern web application for redacting sensitive information from PDF documents. Built with Next.js, TypeScript, and PDF.js.
 
+![image](https://github.com/user-attachments/assets/3fdfa900-04c5-4421-ab20-1f4fc13b8047)
+![image](https://github.com/user-attachments/assets/3b944a79-c3bf-4db3-b41a-24d2f55aea7c)
+![image](https://github.com/user-attachments/assets/fe133c0c-1409-4e21-a450-a40039e8f54a)
+
+
+
+
 ## Features
 
 - **Simple PDF Uploading**: Drag and drop or select PDF files for redaction
