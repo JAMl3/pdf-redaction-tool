@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PDF Redaction Tool
 
-## Getting Started
+A modern web application for redacting sensitive information from PDF documents. Built with Next.js, TypeScript, and PDF.js.
 
-First, run the development server:
+## Features
+
+- **Simple PDF Uploading**: Drag and drop or select PDF files for redaction
+- **Interactive Redaction**: Draw redaction rectangles directly on PDF pages
+- **Real-time Preview**: See redactions as you draw them
+- **Multi-page Support**: Navigate through multi-page PDFs with ease
+- **Zoom Controls**: Adjust zoom levels for precise redaction placement
+- **Download Redacted PDFs**: Securely download redacted documents
+- **Responsive Design**: Works on desktop and tablet devices
+
+## Technology Stack
+
+- **Next.js**: React framework for the frontend
+- **TypeScript**: Type-safe JavaScript
+- **Tailwind CSS**: Utility-first CSS framework
+- **PDF.js**: Mozilla's PDF viewer library
+- **pdf-lib**: PDF manipulation library
+
+## Setup and Installation
+
+### Prerequisites
+
+- Node.js 18.0 or higher
+- npm or yarn
+
+### Development Setup
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/pdf-redaction-tool.git
+   cd pdf-redaction-tool
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Start the development server:
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. Open your browser and navigate to `http://localhost:3000`
+
+### Production Build
 
 ```bash
-npm run dev
+npm run build
 # or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+yarn build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### IIS Deployment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+For deploying to IIS, use the PowerShell script included in the project:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run ps-build
+```
 
-## Learn More
+This will generate a static build in the `out` directory that can be deployed to IIS.
 
-To learn more about Next.js, take a look at the following resources:
+See the [IIS Deployment Guide](IIS_DEPLOYMENT.md) for detailed instructions.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## How to Use
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Upload a PDF**: Click the upload button or drag and drop a PDF file
+2. **Navigate Pages**: Use the page navigation controls to move between pages
+3. **Draw Redactions**: Click and drag on the PDF to create redaction rectangles
+4. **Apply Redactions**: Click the "Apply Redactions" button to process and download the redacted PDF
+5. **Manage Redactions**: View and delete redaction areas using the sidebar
 
-## Deploy on Vercel
+## Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `/src/app`: Main application code
+  - `/components`: React components
+    - `/pdf`: PDF-specific components
+  - `/hooks`: Custom React hooks
+  - `/utils`: Utility functions
+  - `/types`: TypeScript types and interfaces
+  - `/constants`: Application constants
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- [Mozilla PDF.js](https://mozilla.github.io/pdf.js/)
+- [pdf-lib](https://pdf-lib.js.org/)
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
